@@ -23,16 +23,7 @@
           placeholder: 'Gare de Lyon,Auber,...'
         })
       );
-
-      search.addWidget(
-        instantsearch.widgets.hits({
-          container: '#hits-container',
-          templates: {
-            item: 'Hit {{NOM}}: {{UIC}}'
-          }
-        })
-      );
-
+      
       search.addWidget(
         instantsearch.widgets.sortBySelector({
         container: '#sort-by',
@@ -45,10 +36,21 @@
           {
             name: 'station_replica',
             label: 'A-Z'
-        }
-    ]
-  })
-);
+          }
+        ]
+      })
+    );
+
+      search.addWidget(
+        instantsearch.widgets.hits({
+          container: '#hits-container',
+          templates: {
+            item: 'Hit {{NOM}}: {{UIC}}'
+          }
+        })
+      );
+
+      
 
       search.addWidget(
         instantsearch.widgets.pagination({
