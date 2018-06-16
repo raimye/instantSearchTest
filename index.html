@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css" />
+    <title>Instantsearch test page/title>
+  </head>
+  <body>
+    <input type="text" id="search-box" />
+    <div id="hits-container"></div>
+    <div id="pagination-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
+    <script>
+      var search = instantsearch({
+        appId: 'Z6ERL3E9TB',
+        apiKey: '791f019a19049dec01c84c1557e911fb',
+        indexName: 'test_ref_gares'
+      });
+
+      search.addWidget(
+        instantsearch.widgets.searchBox({
+          container: '#search-box',
+          placeholder: 'Gare de Lyon,Auber,...'
+        })
+      );
+
+      search.addWidget(
+        instantsearch.widgets.hits({
+          container: '#hits-container',
+          templates: {
+            item: 'Hit {{objectID}}: FIXME'
+          }
+        })
+      );
+
+      search.addWidget(
+        instantsearch.widgets.pagination({
+          container: '#pagination-container'
+        })
+      );
+
+      search.start();
+    </script>
+  </body>
+</html>
