@@ -34,6 +34,23 @@
       );
 
       search.addWidget(
+        instantsearch.widgets.sortBySelector({
+        container: '#sort-by',
+        autoHideContainer: true,
+        indices: [
+          {
+            name: 'test_ref_gares',
+            label: 'Most relevant'
+          },
+          {
+            name: 'station_replica',
+            label: 'A-Z'
+        }
+    ]
+  })
+);
+
+      search.addWidget(
         instantsearch.widgets.pagination({
           container: '#pagination-container'
         })
