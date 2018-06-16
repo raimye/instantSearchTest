@@ -1,5 +1,5 @@
 <!doctype html>
-<<html lang="fr">>
+<html lang="fr">
   <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css" />
     <title>Instantsearch test page</title>
@@ -28,7 +28,7 @@
         instantsearch.widgets.hits({
           container: '#hits-container',
           templates: {
-            item: 'Hit {{objectID}}: FIXME'
+            item: 'Hit {{NOM}}: {{UIC}}'
           }
         })
       );
