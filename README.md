@@ -1,0 +1,2 @@
+# instantSearchTest
+Algolia InstantSearch test
